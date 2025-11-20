@@ -2,25 +2,9 @@ import { NextAuthOptions } from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
 import CredentialsProvider from "next-auth/providers/credentials"
 
-// DISABLED: We're using JWT strategy, so we don't need PrismaAdapter
-// The adapter is only needed for database sessions, but we're using JWT tokens instead
-// This prevents database connection errors when DATABASE_URL is set but database isn't available
-let adapter: any = undefined
-
-// If you want to use database sessions instead of JWT, uncomment below and ensure DATABASE_URL is valid:
-/*
-if (process.env.DATABASE_URL) {
-  try {
-    const { PrismaAdapter } = require("@next-auth/prisma-adapter")
-    const { prisma } = require("./prisma")
-    if (prisma && typeof prisma.$connect === 'function') {
-      adapter = PrismaAdapter(prisma)
-    }
-  } catch (error) {
-    console.warn("PrismaAdapter not available - using JWT strategy instead:", error)
-  }
-}
-*/
+// Using JWT strategy - sessions are stored in JWT tokens, not database
+// This allows authentication to work without a database connection
+// If you need database sessions in the future, you'll need to use NextAuth v4 with PrismaAdapter
 
 // NextAuth requires at least one provider
 // If no providers are configured, use a minimal credentials provider for development
