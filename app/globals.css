@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #0a1f1a;
+  --foreground: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* Premium glass morphism effect */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+  }
+
+  .glass-strong {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  /* Iridescent gradient animations - Turquoise bird colors */
+  @keyframes iridescent {
+    0%, 100% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+  }
+
+  .iridescent {
+    background: linear-gradient(
+      90deg,
+      #2dd4bf,
+      #14b8a6,
+      #0d9488,
+      #10b981,
+      #059669,
+      #34d399,
+      #6ee7b7,
+      #14b8a6,
+      #2dd4bf
+    );
+    background-size: 200% 200%;
+    animation: iridescent 8s ease infinite;
+  }
+
+  /* Floating animation */
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+
+  .float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  /* Glow pulse animation */
+  @keyframes glow-pulse {
+    0%, 100% {
+      opacity: 0.3;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 0.6;
+      transform: scale(1.05);
+    }
+  }
+
+  .glow-pulse {
+    animation: glow-pulse 3s ease-in-out infinite;
+  }
+
+  /* Shimmer effect */
+  @keyframes shimmer {
+    0% {
+      background-position: -1000px 0;
+    }
+    100% {
+      background-position: 1000px 0;
+    }
+  }
+
+  .shimmer {
+    background: linear-gradient(
+      90deg,
+      transparent,
+      rgba(255, 255, 255, 0.1),
+      transparent
+    );
+    background-size: 1000px 100%;
+    animation: shimmer 3s infinite;
+  }
+
+  /* 3D tilt effect */
+  .tilt-3d {
+    transform-style: preserve-3d;
+    transition: transform 0.3s ease;
+  }
+
+  .tilt-3d:hover {
+    transform: perspective(1000px) rotateX(5deg) rotateY(5deg) scale(1.02);
+  }
+
+  /* Premium gradient text - Green Turquoise */
+  .gradient-text {
+    background: linear-gradient(135deg, #ffffff 0%, #2dd4bf 30%, #14b8a6 60%, #10b981 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Smooth scroll */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #0a1f1a;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #2dd4bf, #14b8a6);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #14b8a6, #10b981);
+  }
+}
+
+
+
+

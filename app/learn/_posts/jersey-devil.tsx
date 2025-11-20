@@ -1,0 +1,52 @@
+import YouTube from "@/app/components/YouTube";
+import type { PostMeta } from "../types";
+
+export const meta: PostMeta = {
+  slug: "jersey-devil",
+  title: "Did The Jersey Devil Exist?",
+  dek: "Investigating the legendary creature of the New Jersey Pine Barrens",
+  date: "2020-12-18",
+  youtube_id: "0FyyQyeSDsU",
+  read_minutes: 6,
+  tags: ["Cryptozoology", "Cryptids", "North America"],
+  published: true,
+};
+
+export default function JerseyDevil() {
+  return (
+    <article className="prose prose-invert prose-lg max-w-3xl mx-auto px-6 py-12">
+      <header className="mb-12">
+        <div className="text-[11px] uppercase tracking-[0.18em] text-muted/80 font-mono mb-4">
+          {new Date(meta.date).toLocaleDateString()} • {meta.read_minutes} min read
+        </div>
+        <h1 className="text-4xl font-bold tracking-tight mb-4">{meta.title}</h1>
+        {meta.dek && (
+          <p className="text-xl text-muted/90 leading-relaxed">{meta.dek}</p>
+        )}
+      </header>
+
+      {meta.youtube_id && (
+        <div className="my-8">
+          <YouTube id={meta.youtube_id} title={meta.title} />
+        </div>
+      )}
+
+      <div className="h-px w-64 bg-line mb-12 [mask-image:linear-gradient(90deg,transparent,white,transparent)]" />
+
+      <p className="text-accent/90 text-sm font-mono tracking-widest uppercase mb-8">
+        Cryptid Investigation
+      </p>
+
+      <p>
+        Watch the full video above to explore the mystery of the Jersey Devil, one of America's 
+        most famous cryptids said to haunt the Pine Barrens of New Jersey.
+      </p>
+    </article>
+  );
+}
+
+
+
+
+
+
