@@ -127,3 +127,14 @@ declare module "next-auth/jwt" {
     uid: string
   }
 }
+
+// Export handlers and auth function for NextAuth v5
+import NextAuth from "next-auth"
+
+// Create NextAuth instance and export handlers and auth
+export const { handlers, auth } = NextAuth(authOptions)
+
+// Helper function for backward compatibility with getServerSession
+export async function getServerSession() {
+  return await auth()
+}
