@@ -38,7 +38,7 @@ export default function JerseyDevil() {
       </p>
 
       <p>
-        Watch the full video above to explore the mystery of the Jersey Devil, one of America's 
+        Watch the full video above to explore the mystery of the Jersey Devil, one of America&apos;s 
         most famous cryptids said to haunt the Pine Barrens of New Jersey.
       </p>
     </article>

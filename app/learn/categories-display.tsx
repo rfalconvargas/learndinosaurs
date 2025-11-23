@@ -13,7 +13,7 @@ export default function CategoriesDisplay() {
           </h1>
           <p className="text-xl text-muted leading-relaxed max-w-3xl">
             Organized hierarchically: Major Ideas → Sub-ideas → Individual Species.
-            Each category represents a "big idea" with potential for 100M+ views
+            Each category represents a &quot;big idea&quot; with potential for 100M+ views
             and the ability to generate 100+ related videos.
           </p>
           <div className="mt-8 h-px w-64 bg-line [mask-image:linear-gradient(90deg,transparent,white,transparent)]" />
@@ -111,7 +111,7 @@ export default function CategoriesDisplay() {
           </h3>
           <div className="space-y-4 text-muted">
             <p>
-              Each category is designed as a "big idea" that can anchor a major YouTube playlist.
+              Each category is designed as a &quot;big idea&quot; that can anchor a major YouTube playlist.
               The flagship species represents the most compelling entry point - the video that could
               reach 100M+ views with exceptional CGI and storytelling.
             </p>

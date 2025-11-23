@@ -40,7 +40,7 @@ export default function Megalodon2022() {
       <p>
         Watch the full video above for a comprehensive exploration of Megalodon, 
         the largest predatory shark to ever exist and one of the most formidable 
-        predators in Earth's history.
+        predators in Earth&apos;s history.
       </p>
     </article>
   );

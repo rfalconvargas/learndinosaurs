@@ -38,7 +38,7 @@ export default function Eucritta() {
       </p>
 
       <p>
-        Watch the full video above to learn about Eucritta, nicknamed the "creature from the black lagoon."
+        Watch the full video above to learn about Eucritta, nicknamed the &quot;creature from the black lagoon.&quot;
       </p>
     </article>
   );

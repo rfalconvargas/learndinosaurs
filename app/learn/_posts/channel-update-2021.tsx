@@ -38,7 +38,7 @@ export default function ChannelUpdate2021() {
       </p>
 
       <p>
-        Watch the full video above for an important channel update about Enchiridion and what's coming next.
+        Watch the full video above for an important channel update about Enchiridion and what&apos;s coming next.
       </p>
     </article>
   );

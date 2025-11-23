@@ -38,7 +38,7 @@ export default function Entelodon() {
       </p>
 
       <p>
-        Watch the full video above to learn about Entelodon, the massive "hell pig" that 
+        Watch the full video above to learn about Entelodon, the massive &quot;hell pig&quot; that 
         dominated Oligocene ecosystems with its formidable size and omnivorous diet.
       </p>
     </article>
