@@ -122,12 +122,6 @@ declare module "next-auth" {
   }
 }
 
-declare module "next-auth/jwt" {
-  interface JWT {
-    uid: string
-  }
-}
-
 // Export handlers and auth function for NextAuth v5
 import NextAuth from "next-auth"
 
