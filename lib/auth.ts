@@ -1,4 +1,4 @@
-import { NextAuthOptions } from "next-auth"
+import type { NextAuthConfig } from "next-auth"
 import GoogleProvider from "next-auth/providers/google"
 import CredentialsProvider from "next-auth/providers/credentials"
 
@@ -36,7 +36,7 @@ if (process.env.NODE_ENV === "development") {
   })
 }
 
-export const authOptions: NextAuthOptions = {
+export const authOptions: NextAuthConfig = {
   providers,
   // No adapter - using JWT strategy (sessions stored in JWT tokens, not database)
   // This allows auth to work without a database connection
